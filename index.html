@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        테스트용 html
+    </title>
+    <script type="text/javascript">
+        function setBrowserFrameSource() {
+            let initial_url = document.getElementById("txtUrl").value;
+            let urlArray = initial_url.split("watch?v=");
+            console.log(urlArray[0]);
+            console.log(urlArray[1]);
+            let new_url = urlArray[0] + 'embed/' + urlArray[1];
+            let browserFrame = document.getElementById("link");
+            browserFrame.src = new_url;
+        }
+        //https://www.youtube.com/watch?v=A9Fw4O0dFTY 에서 watch?v= 제거하고 embed/를 삽입.
+        //https://www.youtube.com/embed/A9Fw4O0dFTY
+    </script>
+</head>
+
+<body>
+    <h1> 테스트용 html</h1><br>
+
+    <form method="post" target="link">
+        <input id="txtUrl" style="width:80%;" placeholder="Put the website here" name="url" type="text" />
+        <input style="width:80%;" type="button" value="입력" onclick="setBrowserFrameSource(); return false;" />
+    </form>
+    <iframe id="link" name="link" src="" style="width:100%; min-height: 500px;"></iframe>
+
+    <div>
+        <p>
+            <!-- flask에서 어떻게 통신하는지 모르겠음. script라는 이름으로 array가 왔다고 가정했음 -->
+            {% if script == None %}
+        <h5> 데이터 없음 </h5>
+        {% else %}
+        <ul>
+            {% for i in range(1, script+1) %}
+            <li>
+                <!-- 출력 데이터 -->
+            </li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+        </p>
+    </div>
+
+</body>
+
+</html>
