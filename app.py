@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from dotenv import load_dotenv
 import os
 import subprocess
-import youtube_dl
+import yt_dlp
 import yt
 
 #flask run --host=0.0.0.0 --port=5000
@@ -18,7 +18,6 @@ def hello_world():
 def yt_to_text():
     if request.method == 'POST':
         val = request.form
-        print(val)
         link = val["url"]
         ydl_opts = {
             'format': 'bestaudio/best',
@@ -28,7 +27,7 @@ def yt_to_text():
                 'preferredquality': '320',
             }],
         }
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download([link])
 
         old_filename = [file for file in os.listdir('./') if file.endswith('.wav')]
