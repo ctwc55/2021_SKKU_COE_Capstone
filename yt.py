@@ -14,6 +14,7 @@ def transcribe_gcs(gcs_uri):
         sample_rate_hertz=16000,
         language_code="ko-KR",
         enable_word_time_offsets=True,
+        enable_automatic_punctuation=True,
     )
 
     operation = client.long_running_recognize(config=config, audio=audio)
@@ -28,3 +29,4 @@ def transcribe_gcs(gcs_uri):
         print("Start time: {}".format(alternative.words[0].start_time.total_seconds()))
 
     return response
+
