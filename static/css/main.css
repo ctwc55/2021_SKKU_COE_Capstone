@@ -1,0 +1,33 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-y: hidden;
+}
+.outlined-box {
+    border: 2px solid #000;
+    position: relative;
+    padding: 2vw 3vw;
+}
+.btlined-box{
+    border-bottom: 2px solid #000;
+}
+.tlined-box{
+    border-top: 2px solid #000;
+}
+.rlined-box{
+    border-right: 2px solid #000;
+}
+.xlined-box{
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.mw-700{
+    max-width: 700px !important;
+}
+.mobile-VideoSection{
+    border-right: none !important;
+    border-bottom: 2px solid #000;
+    width: 100% !important;
+}
