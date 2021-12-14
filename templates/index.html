@@ -1,36 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>
-        테스트용 html
-    </title>
-    <script type="text/javascript">
-        function setBrowserFrameSource() {
-            let initial_url = document.getElementById("txtUrl").value;
-            let urlArray = initial_url.split("watch?v=");
-            console.log(urlArray[0]);
-            console.log(urlArray[1]);
-            let new_url = urlArray[0] + 'embed/' + urlArray[1];
-            let browserFrame = document.getElementById("link");
-            browserFrame.src = new_url;
-        }
-        //https://www.youtube.com/watch?v=A9Fw4O0dFTY 에서 watch?v= 제거하고 embed/를 삽입.
-        //https://www.youtube.com/embed/A9Fw4O0dFTY
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+
+    <link rel="icon" type="image/ico" href="">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>TNT</title>
+    <meta name="description" content="">
+    <meta name="robots" content="">
+    <meta property="og:locale" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:type" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:secure_url" content="">
+    <meta property="og:image:width" content="">
+    <meta property="og:image:height" content="">
+    <meta property="article:published_time" content="">
+    <meta property="article:modified_time" content="">
+    <meta property="article:publisher" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:domain" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:image" content="">
+
+
 </head>
 
 <body>
-    <h1> 테스트용 html</h1><br>
 
-    <form method="post" target="link">
-        <input id="txtUrl" style="width:80%;" placeholder="Put the website here" name="url" type="text" />
-        <input style="width:80%;" type="button" value="입력" onclick="setBrowserFrameSource(); return false;" />
-    </form>
-    <iframe id="link" name="link" src="" style="width:100%; min-height: 500px;"></iframe>
+    <div id="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light btlined-box">
+            <a class="navbar-brand" href="#">헤더부분</a>
+        </nav>
+    </div>
 
-    
+    <div id="get-url-section" class="">
+        <div class="container-fluid btlined-box">
+            <div id="get-url-box" class="container-md mx-auto xlined-box mw-700">
+                url 입력하는 부분
+                <!-- <form class="" action="" method="">
+                    <div class="col-6  mx-auto d-flex flex-row">
+                        <input type="input" class="w-100">
+                        <button type="button" class=""><i></i>
+                            <div class="btn-text">convert</div>
+                        </button>
+                    </div>
+                </form> -->
+            </div>
+        </div>
+    </div>
+    <div id="result-section" class="row mx-0 btlined-box">
+        <div id="video-section" class="rlined-box" style="">
+            <div class="">
+                영상 나올 부분. section 가로 세로랑 영상 비율 상 가로 세로랑 먼저 닿는 쪽에 맞춰서 배치.
+                <!-- <iframe></iframe> -->
+            </div>
+        </div>
+        <div id="script-section" class="col px-0">
+            <div id="search-section" class="btlined-box">
+                검색하는 부분
+            </div>
+            <div id="timeline-section">
+                <ul style="overflow: scroll; height: 100%;" class="mb-0">
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                    <li> 타임라인 나올 부분</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer-section">
+        <footer>
+            <div class="p-3">
+                푸터 부분
+            </div>
+        </footer>
+    </div>
 
 </body>
+<script type="text/javascript">
+
+    let header = document.querySelector('#header-section');
+    let footer = document.querySelector('#footer-section');
+    let getUrl = document.querySelector('#get-url-box');
+    let result = document.querySelector('#result-section');
+    let video = document.querySelector('#video-section');
+    let script = document.querySelector('#script-section');
+    let search = document.querySelector('#search-section');
+    let timeline = document.querySelector('#timeline-section');
+
+    // iframe 부분 너비 계산
+    let getUrlW = window.getComputedStyle(getUrl).getPropertyValue('width').split('px');
+    video.style.width = String(parseInt(getUrlW[0]) + (window.innerWidth - parseInt(getUrlW[0])) / 2) + 'px';
+
+    // result 부분 높이 계산
+    let headerH = window.getComputedStyle(header).getPropertyValue('height').split('px');
+    let footerH = window.getComputedStyle(footer).getPropertyValue('height').split('px');
+    let getUrlH = window.getComputedStyle(getUrl).getPropertyValue('height').split('px');
+    result.style.height = String(window.innerHeight - parseInt(headerH[0]) - parseInt(footerH[0]) - parseInt(getUrlH[0])) + 'px';
+
+    // script 부분 높이 계산
+    let resultH = window.getComputedStyle(result).getPropertyValue('height').split('px');
+    let searchH = window.getComputedStyle(search).getPropertyValue('height').split('px');
+    timeline.style.height = String(parseInt(resultH[0]) - parseInt(searchH[0])) + 'px';
+
+    if (window.innerWidth <= 808) {
+        header.classList.add('d-none');
+        footer.classList.add('d-none');
+        video.classList.add('mobile-VideoSection');
+        getUrl.classList.remove('xlined-box');
+
+        let body = document.querySelector('body');
+        body.style.height = String(window.innerHeight) + 'px';
+
+        // result 부분 높이 계산
+        let getUrlH = window.getComputedStyle(getUrl).getPropertyValue('height').split('px');
+        result.style.height = String(window.innerHeight - parseInt(getUrlH[0])) + 'px';
+
+        // script 부분 높이 계산
+        let search = document.querySelector('#search-section');
+        let searchH = window.getComputedStyle(search).getPropertyValue('height').split('px');
+        let resultH = window.getComputedStyle(result).getPropertyValue('height').split('px');
+
+        let timeline = document.querySelector('#timeline-section');
+        timeline.style.height = String(parseInt(resultH[0]) - parseInt(searchH[0])) + 'px';
+    }
+
+</script>
+<script type="text/javascript">
+    window.onresize = adjSriptSectionWd;
+    function adjSriptSectionWd() {
+        let header = document.querySelector('#header-section');
+        let footer = document.querySelector('#footer-section');
+        let getUrl = document.querySelector('#get-url-box');
+        let result = document.querySelector('#result-section');
+        let video = document.querySelector('#video-section');
+        let script = document.querySelector('#script-section');
+        let search = document.querySelector('#search-section');
+        let timeline = document.querySelector('#timeline-section');
+
+
+        // iframe 부분 너비 계산
+        let getUrlW = window.getComputedStyle(getUrl).getPropertyValue('width').split('px');
+        video.style.width = String(parseInt(getUrlW[0]) + (window.innerWidth - parseInt(getUrlW[0])) / 2) + 'px';
+
+        // result 부분 높이 계산
+        let headerH = window.getComputedStyle(header).getPropertyValue('height').split('px');
+        let footerH = window.getComputedStyle(footer).getPropertyValue('height').split('px');
+        let getUrlH = window.getComputedStyle(getUrl).getPropertyValue('height').split('px');
+        result.style.height = String(window.innerHeight - parseInt(headerH[0]) - parseInt(footerH[0]) - parseInt(getUrlH[0])) + 'px';
+
+        // script 부분 높이 계산
+        let resultH = window.getComputedStyle(result).getPropertyValue('height').split('px');
+        let searchH = window.getComputedStyle(search).getPropertyValue('height').split('px');
+        timeline.style.height = String(parseInt(resultH[0]) - parseInt(searchH[0])) + 'px';
+
+        if (window.innerWidth > 808) {
+            video.classList.remove('mobile-VideoSection');
+            header.classList.remove('d-none');
+            footer.classList.remove('d-none');
+        }
+        else {
+            video.classList.add('mobile-VideoSection');
+            header.classList.add('d-none');
+            footer.classList.add('d-none');
+            getUrl.classList.remove('xlined-box');
+            // result.classList.remove('btlined-box');
+            let body = document.querySelector('body');
+            body.style.height = String(window.innerHeight) + 'px';
+
+            // result 부분 높이 계산
+            let getUrlH = window.getComputedStyle(getUrl).getPropertyValue('height').split('px');
+            result.style.height = String(window.innerHeight - parseInt(getUrlH[0])) + 'px';
+
+            // script 부분 높이 계산
+            let search = document.querySelector('#search-section');
+            let searchH = window.getComputedStyle(search).getPropertyValue('height').split('px');
+            let resultH = window.getComputedStyle(result).getPropertyValue('height').split('px');
+
+            let timeline = document.querySelector('#timeline-section');
+            timeline.style.height = String(parseInt(resultH[0]) - parseInt(searchH[0])) + 'px';
+        }
+    }
+</script>
 
 </html>
