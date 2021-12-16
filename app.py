@@ -42,13 +42,6 @@ def yt_to_text():
 
         load_dotenv()
 
-        #OBJECT_LOCATION = "/home/ubuntu/Projects/2021_SKKU_COE_Capstone/audiofile.wav"
-        #OAUTH2_TOKEN = os.environ.get("OAUTH2_TOKEN")
-        #OBJECT_CONTENT_TYPE = "audio/x-wav"
-        #BUCKET_NAME = "skku-coe-capstone-2021"
-        #OBJECT_NAME = "audiofile.wav"
-        #subprocess.call(f"curl -X POST --data-binary @{OBJECT_LOCATION} -H \"Authorization: Bearer {OAUTH2_TOKEN}\" -H \"Content-Type: {OBJECT_CONTENT_TYPE}\" \"https://storage.googleapis.com/upload/storage/v1/b/{BUCKET_NAME}/o?uploadType=media&name={OBJECT_NAME}\"", shell=True)
-
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.environ.get("GOOGLE_KEY_PATH")
 
         bucket_name = os.environ.get("BUCKET_NAME")
