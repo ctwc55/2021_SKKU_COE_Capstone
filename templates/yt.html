@@ -27,7 +27,17 @@
     <meta property="og:image:width" content="">
     <meta property="og:image:height" content="">
     <script src="https://www.youtube.com/iframe_api"></script>
-
+    <script type="text/javascript">
+        function purifyTime(e){
+            let prepurifiedstr = e.split('`');
+            console.log(prepurifiedstr);
+            let purifiedstr = prepurifiedstr[0].split(':');
+            console.log(purifiedstr);
+            let time = parseInt(purifiedstr[0]) * 60 + parseInt(purifiedstr[1]);
+            console.log(time);
+            return time;
+        }
+    </script>
 </head>
 
 <body>
@@ -76,7 +86,7 @@
                         <div class="h-100 rlined-box" style="width: 0px;"></div>
                     
                         <div class="col-8 text-left align-self-center d-inline">
-                            <a id="script-result" class="seektotime" onclick="seekTotime(`{{ key }}`);">
+                            <a id="script-result" class="seektotime" onclick="seekTotime(purifyTime(`{{ key }}`));">
                                 {{ value }}
                             </a>
                         </div>
