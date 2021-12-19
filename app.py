@@ -24,6 +24,10 @@ def yt_to_text():
 
         video_id = link.split('v=')[-1]
 
+        remain_files = [file for file in os.listdir('./') if file.endswith('.wav')]
+        for file in remain_files:
+            os.remove(file)
+
         ydl_opts = {
             'format': 'bestaudio/best',
             'postprocessors': [{
@@ -54,14 +58,16 @@ def yt_to_text():
 
         blob.upload_from_filename(source_file_name)
 
-        yt_tnt = yt.transcribe_gcs("gs://skku-coe-capstone-2021/audiofile.wav")
+        yt_tnt, uttered_text = yt.transcribe_gcs("gs://skku-coe-capstone-2021/audiofile.wav")
 
         yt_tnt["video_id"] = video_id
+
+        tcn = yt.get_common_nouns(uttered_text)
 
         subprocess.call("rm sample.wav", shell=True)
         subprocess.call("rm audiofile.wav", shell=True)
 
-    return render_template('yt.html', result = yt_tnt)
+    return render_template('yt.html', result = yt_tnt, tcn = tcn)
 
 
 if __name__ == '__main__':
